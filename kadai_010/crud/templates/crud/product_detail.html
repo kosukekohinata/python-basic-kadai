@@ -1,6 +1,11 @@
-<h1>{{ object.name }}</h1>
+{% extends "base.html" %}
+{% load bootstrap %}
+
+{% block title %}商品詳細{% endblock %}
+
+{% block content %}
+<h1 class="my-4">商品詳細</h1>
 <p class="text-muted">価格: {{ object.price }}円</p>
-<p class="text-muted">説明: {{ object.description }}</p>
-<p class="text-muted">作成日: {{ object.created_at }}</p>
 
 <a href="{% url 'list' %}" class="btn btn-secondary mt-3">商品一覧に戻る</a>
+{% endblock %}
